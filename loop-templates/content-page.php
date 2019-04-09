@@ -37,7 +37,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php 
+
+		//Remove the following comment if you want to be able to edit a page outside dashboard.
+		
+		//edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); 
+		?>
 
 	</footer><!-- .entry-footer -->
 
