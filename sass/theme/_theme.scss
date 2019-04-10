@@ -12,8 +12,10 @@ h6 {
 	color: #D4784A;
 }
 
-.my-navbar {
-	background-color: $nav-color;
+#wrapper-navbar {
+	.my-navbar {
+		background-color: $nav-color;
+	}
 }
 
 a:hover {
