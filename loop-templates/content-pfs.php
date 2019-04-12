@@ -24,7 +24,7 @@
 						
 						<small class="text-muted">
 
-							<em>Client: <?php echo $client; ?></em>
+							<em><?php _e('Client: ', 'understap'); echo $client; ?></em>
 
 						</small>
 
@@ -65,20 +65,3 @@
 	</div>
 
 </div>
-
-
-<!-- </div>
-	 <div class="usp">
-		
-		
-
-		<?php 
-			// $link = get_post_meta(get_the_ID(), 'link', true);
-			// if($link) {
-			// 	?>
-			// 		<a href="<?php //echo $link; ?>" class="btn btn-primary"><?php //_e('Read more', 'understrap'); ?></a>
-			// 	<?php
-			// }
-		?>
-	</div>
-</div> -->
