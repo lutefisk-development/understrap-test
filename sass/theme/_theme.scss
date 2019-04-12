@@ -1,23 +1,6 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-body {
-	background-color: #DEE7E9;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #D4784A;
-}
-
-#wrapper-navbar {
-	.my-navbar {
-		background-color: $nav-color;
-	}
-}
-
-a:hover {
-	text-decoration: none;
-}
+@import "generic";
+@import "navbar";
+@import "usps";
+@import "pf";

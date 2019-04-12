@@ -1,0 +1,28 @@
+/**
+* USP styles
+*/
+
+#wrapper-usps {
+	text-align: center;
+
+	.col-md {
+		padding: 3rem 0;
+		margin: 0 0.2rem;
+		display: flex;
+		justify-content: stretch;
+	}
+
+	.fa {
+		margin-bottom: 0.75rem;
+	}
+
+	.usp {
+		background-color: #eee;
+		padding: 3rem 0.5rem;
+		border-radius: 180px;
+	}
+
+	h1 {
+		font-size: 1.25rem;
+	}
+}
