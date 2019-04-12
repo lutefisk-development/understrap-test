@@ -24,7 +24,12 @@
 						
 						<small class="text-muted">
 
-							<em><?php printf(__('Client: %s', 'understap'), $client); ?></em>
+							<em><?php printf(
+								__('Client: %s', 
+								'understap'), 
+								$client); 
+								?>
+							</em>
 
 						</small>
 
