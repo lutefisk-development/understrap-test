@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-md-6 col-lg-4">
 
 	<div class="card usp">
 
@@ -6,7 +6,7 @@
 
 			<figure class="featured-image-wrapper">
 
-				<?php the_post_thumbnail('featured-image', ['class' => 'img-fluid d-block mx-auto']); ?>
+				<?php the_post_thumbnail('portfolio-thumbnail', ['class' => 'img-fluid d-block mx-auto']); ?>
 
 			</figure>
 
@@ -24,7 +24,7 @@
 						
 						<small class="text-muted">
 
-							<em><?php _e('Client: ', 'understap'); echo $client; ?></em>
+							<em><?php printf(__('Client: %s', 'understap'), $client); ?></em>
 
 						</small>
 

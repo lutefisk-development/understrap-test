@@ -20,6 +20,8 @@ if($pfs->have_posts()) : ?>
 		
 		<div class="container">
 
+			<h1><?php _e('Portfolio', 'understrap'); ?></h1>
+
 			<div class="row">
 
 				<?php while($pfs->have_posts()) : $pfs->the_post(); ?>

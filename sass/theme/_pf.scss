@@ -6,7 +6,19 @@
 	padding: 3rem 0;
 	background-color: #eee;
 
-	.col-md-4 {
+	.col-md-6 {
+		margin-top: 2rem;
+
+		.usp {
+			box-shadow: 1em 0 .4em $shadow-color;
+
+			summary {
+				margin-bottom: 0.3rem;
+			}
+		}
+	}
+
+	.col-lg-4 {
 		margin-top: 2rem;
 
 		.usp {
