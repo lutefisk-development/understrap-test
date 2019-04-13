@@ -6,26 +6,18 @@
 	padding: 3rem 0;
 	background-color: #eee;
 
-	.col-md-6 {
+	.portfolio {
 		margin-top: 2rem;
 
-		.usp {
-			box-shadow: 1em 0 .4em $shadow-color;
-
-			summary {
-				margin-bottom: 0.3rem;
-			}
+		img {
+			margin-bottom: 0.5rem;
 		}
-	}
 
-	.col-lg-4 {
-		margin-top: 2rem;
-
-		.usp {
+		.pfs {
 			box-shadow: 1em 0 .4em $shadow-color;
 
 			summary {
-				margin-bottom: 0.3rem;
+				margin-top: 1rem;
 			}
 		}
 	}
@@ -39,7 +31,10 @@
 		.card-body {
 			h1 {
 				font-size: 1.25rem;
-				margin-bottom: 1rem;
+			}
+
+			p {
+				margin-top: 1rem;
 			}
 		}
 	}

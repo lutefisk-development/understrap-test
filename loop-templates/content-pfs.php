@@ -1,20 +1,22 @@
-<div class="col-md-6 col-lg-4">
+<div class="portfolio col-md-6 col-lg-4">
 
-	<div class="card usp">
+	<div class="card pfs">
 
 		<?php if(has_post_thumbnail()) : ?>
 
-			<figure class="featured-image-wrapper">
+			<a href="<?php the_permalink(); ?>">
 
-				<?php the_post_thumbnail('portfolio-thumbnail', ['class' => 'img-fluid d-block mx-auto']); ?>
+				<?php the_post_thumbnail('portfolio-thumbnail', ['class' => 'img-fluid']); ?>
 
-			</figure>
+			</a>
 
 		<?php endif; ?>
 
 		<div class="card-body">
 
 			<h1><?php the_title(); ?></h1>
+
+			<?php the_excerpt(); ?>
 
 			<?php
 
@@ -38,8 +40,6 @@
 				<?php endif;	
 			
 			?>
-
-			<?php the_excerpt(); ?>
 
 		</div>
 
