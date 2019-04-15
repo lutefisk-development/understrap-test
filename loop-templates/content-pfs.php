@@ -18,52 +18,67 @@
 
 			<?php the_excerpt(); ?>
 
-			<?php
+			<div class="button-with-span">
 
-				if($client = get_post_meta(get_the_ID(), 'client', true)) : ?>
+				<a href="<?php the_permalink( get_the_ID() ) ?>" class="btn btn-secondary understrap-read-more-link">
+
+					<?php _e( 'Read More', 'understrap' )?>
+
+				</a>
 				
-					<summary class="text-small">
-						
-						<small class="text-muted">
+				<?php
 
-							<em><?php printf(
+					if($client = get_post_meta(get_the_ID(), 'client', true)) : 
+					
+				?>
+
+				<span class="pull-right">
+				
+					<small>
+
+						<em>
+											
+							<?php printf(
 								__('Client: %s', 
 								'understap'), 
 								$client); 
-								?>
-							</em>
+							?>
 
-						</small>
+						</em>
 
-					</summary>
+					</small>
 
-				<?php endif;	
-			
-			?>
+				</span>
+
+				<?php 
+					
+					endif; 
+					
+				?>
+
+			</div>
 
 		</div>
 
 		<div class="card-footer">
-
-			<summary class="text-small">
 				
-				<small class="text-muted">
+			<small class="text-muted">
 
-					<div class="metadata-wrapper">
+				<div class="metadata-wrapper">
 
-						<?php
-							the_terms(
-								get_the_ID(),
-								'us_branches',
-								__('Branches: ', 'understrap')
-							);
-						?>
+					<?php
+							
+						the_terms(
+							get_the_ID(),
+							'us_branches',
+							__('Branches: ', 'understrap')
+						);
 
-					</div>
+					?>
 
-				</small>
-		
-			</summary>
+				</div>
+
+			</small>
 
 		</div>
 	
