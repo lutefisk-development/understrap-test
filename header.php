@@ -52,7 +52,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 					<?php } else {
-						the_custom_logo();
+						// the_custom_logo();
+						?>
+							<a class="navbar-brand" href="/">
+								<?php us_the_custom_logo(); ?>
+							</a>
+						<?php
 					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">

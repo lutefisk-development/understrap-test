@@ -36,18 +36,3 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
-
-function ustrap_theme_setup() {
-	/**
-	  * Theme Setup Custom Header
-	  */
-	  add_theme_support( 'custom-header', [
-		'default-image'      => get_stylesheet_directory_uri() . '/assets/img/default-image.jpg',
-		'default-text-color' => '000',
-		'width'              => 2560,
-		'height'             => 350,
-		'flex-width'         => true,
-		'flex-height'        => true,
-	]);
-}
-add_action('after_setup_theme', 'ustrap_theme_setup');

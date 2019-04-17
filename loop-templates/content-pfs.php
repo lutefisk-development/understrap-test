@@ -1,12 +1,16 @@
+<?php
+	$logo = get_field('logo');
+?>
+
 <div class="portfolio col-md-6 col-lg-4">
 
 	<div class="card pfs">
 
-		<?php if(has_post_thumbnail()) : ?>
+		<?php if($logo) : ?>
 
 			<a href="<?php the_permalink(); ?>">
 
-				<?php the_post_thumbnail('portfolio-thumbnail', ['class' => 'img-fluid']); ?>
+				<img src="<?php echo $logo['url']; ?>" alt="<?php _e('The logo for the single portfolio-item', 'understrap'); ?>" class="img-fluid">
 
 			</a>
 
@@ -67,13 +71,26 @@
 				<div class="metadata-wrapper">
 
 					<?php
-							
-						the_terms(
-							get_the_ID(),
-							'us_branches',
-							__('Branches: ', 'understrap')
+
+						$terms = wp_get_object_terms(
+							get_the_ID(), 
+							'us_branches', 
+							[
+								'fields' => 'names'
+							]
 						);
 
+						echo __('Branches: ', 'understrap');
+
+						$i = 0;
+						foreach($terms as $term) {
+							$i++;
+							if($i > 1) {
+								echo ", ";
+							}
+
+							echo $term;
+						}
 					?>
 
 				</div>

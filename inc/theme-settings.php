@@ -33,3 +33,43 @@ if ( ! function_exists( 'understrap_setup_theme_default_settings' ) ) {
 		}
 	}
 }
+
+function ustrap_theme_setup() {
+	/**
+	  * Theme Setup Custom Logo
+	  */
+	  add_theme_support( 'custom-logo', [
+		'height'      => 60,
+		'width'       => 200,
+		'flex-height' => false,
+		'flex-width'  => true,
+		'header-text' => [ 'site-title', 'site-description' ],
+	 ]);
+
+	
+	 /**
+	  * Theme Setup Custom Header
+	  */
+	  add_theme_support( 'custom-header', [
+		'default-image'      => get_stylesheet_directory_uri() . '/assets/img/default-image.jpg',
+		'default-text-color' => '000',
+		'width'              => 2560,
+		'height'             => 350,
+		'flex-width'         => true,
+		'flex-height'        => true,
+	]);
+}
+add_action('after_setup_theme', 'ustrap_theme_setup');
+
+function us_the_custom_logo() {
+	$custom_logo_id = get_theme_mod('custom_logo');
+
+	$logo_url = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+	if(has_custom_logo()) {
+		echo '<img src="'. $logo_url[0] . '" class="img-fluid" alt="Site-Logo" title="' . get_bloginfo('name') . '">';
+		
+	} else {
+		bloginfo('name');
+	}
+}
