@@ -16,11 +16,11 @@ $pfs = new WP_Query([
 
 if($pfs->have_posts()) : ?>
 
-	<div class="wrapper" id="wrapper-pfs">
+	<section class="wrapper" id="wrapper-pfs">
 		
 		<div class="container">
 
-			<h1><?php _e('Portfolio', 'understrap'); ?></h1>
+			<h1><?php _e(get_field('portfolio_header'), 'understrap'); ?></h1>
 
 			<div class="row">
 
@@ -40,6 +40,6 @@ if($pfs->have_posts()) : ?>
 
 		</div>
 
-	</div>
+	</section>
 
 <?php endif; 

@@ -4,7 +4,12 @@
 
 #wrapper-pfs {
 	padding: 3rem 0;
-	background-color: #eee;
+	background-color: $portfolio-bg;
+
+	h1,
+	p {
+		color: $portfolio-color;
+	}
 
 	.portfolio {
 		margin-top: 2rem;
@@ -29,6 +34,17 @@
 
 	.card {
 		.card-body {
+			background-color: lighten($portfolio-bg, 10%);
+
+			a {
+				background-color: darken($portfolio-bg, 20%);
+				color: darken($portfolio-color, 20%);
+			}
+
+			em {
+				color: lighten($portfolio-color, 10%);
+			}
+
 			.button-with-span {
 				margin-top: 2rem;
 			}
@@ -41,21 +57,17 @@
 				margin-top: 1rem;
 			}
 		}
-	}
-}
 
-#single_pfs-wrapper {
-	article {
-		h1 {
-			margin-bottom: 2rem;
-		}
+		.card-footer {
 
-		img {
-			margin-bottom: 3rem;
-		}
+			small,
+			.text-muted {
+				color: $portfolio-color !important;
+			}
 
-		a {
-			margin-top: 3rem;
+			#metadata-wrapper {
+				background-color: lighten($portfolio-bg, 10%);
+			}
 		}
 	}
 }

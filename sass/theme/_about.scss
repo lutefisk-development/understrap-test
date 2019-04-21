@@ -1,0 +1,59 @@
+/**
+* About-Me styles
+*/
+
+#about {
+	background-color: $about-bg;
+
+	#about-content {
+		@include media-breakpoint-down(sm) {
+			max-width: 100% !important;
+		}
+
+		max-width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+
+		h1 {
+			font-family: 'Exo', sans-serif;
+			color: $about-color;
+			margin-top: 5rem;
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-family: 'Exo', sans-serif;
+			color: $about-color;
+			margin-top: 1rem;
+			font-size: 1.5rem;
+		}
+
+		p {
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+			font-family: 'Gloria Hallelujah', cursive;
+			color: $about-color;
+			font-size: 1.7rem;
+			margin-top: 3rem;
+		}
+
+		.about-picture {
+			@include media-breakpoint-down(sm) {
+				max-width: 100% !important;
+				margin-bottom: 4rem;
+			}
+
+			margin-top: 5rem;
+			max-width: 70%;
+			margin-left: auto;
+			margin-right: auto;
+
+			img {
+				border-radius: 50%;
+				border: 20px solid;
+				border-color: lighten($about-bg, 10%);
+
+			}
+		}
+	}
+}

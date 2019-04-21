@@ -2,8 +2,29 @@
 * Generic styles
 */
 
-body {
-	background-color: #DEE7E9;
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+html {
+	body {
+		background-color: $about-bg;
+
+		section {
+			min-height: 100vh;
+
+		}
+
+		.bottom {
+			font-size: 1.2rem;
+			text-align: center;
+			color: $about-color;
+			margin: 0;
+		}
+	}
+}
+
+.bottom,
+a {
+	color: lighten($about-color, 10%);
 }
 
 h1,

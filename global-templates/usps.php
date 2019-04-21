@@ -16,9 +16,11 @@ $usps = new WP_Query([
 
 if($usps->have_posts()) : ?>
 
-	<div class="wrapper" id="wrapper-usps">
+	<section class="wrapper" id="wrapper-usps">
 		
 		<div class="container">
+
+			<h1><?php _e(get_field('usp_header'), 'understrap'); ?></h1>
 
 			<div class="row">
 
@@ -38,6 +40,6 @@ if($usps->have_posts()) : ?>
 
 		</div>
 
-	</div>
+	</section>
 
 <?php endif; 

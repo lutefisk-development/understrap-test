@@ -3,6 +3,7 @@
 */
 
 #wrapper-usps {
+	background-color: $usps-bg;
 	text-align: center;
 
 	.col-md {
@@ -17,12 +18,35 @@
 	}
 
 	.usp {
-		background-color: #eee;
-		padding: 3rem 0.5rem;
+
+		background-color: lighten($usps-bg, 10%);
+		padding: 5rem 0.5rem;
 		border-radius: 180px;
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+	}
+
+	.row {
+
+
+		h1 {
+			font-size: 1.25rem;
+			margin-bottom: 0.5rem;
+		}
 	}
 
 	h1 {
-		font-size: 1.25rem;
+		color: $usps-color;
+		margin-top: 2rem;
+		margin-bottom: 5rem;
+	}
+
+	p {
+		color: $usps-color;
+		padding-bottom: 1rem;
+	}
+
+	span {
+		color: $usps-color;
 	}
 }

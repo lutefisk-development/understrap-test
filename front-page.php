@@ -20,31 +20,36 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<?php get_template_part( 'global-templates/hero' ); ?>
+<?php get_template_part( 'global-templates/about' ); ?>
 
 <?php get_template_part( 'global-templates/usps' ); ?>
 
 <?php get_template_part( 'global-templates/pfs' ); ?>
 
+<?php get_template_part( 'global-templates/lang' ); ?>
+
+<?php get_template_part( 'global-templates/contact' ); ?>
+
+
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
 
 			<main class="site-main" id="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'frontpage' ); ?>
+					<p class="bottom"><?php _e('Per Kristian Svanberg &nbsp; &copy; &nbsp; 2019 - ', 'understrap'); ?><span><a href="https://github.com/lutefisk-development"><?php _e(' My GitHub', 'understrap'); ?></a></span></p>
+
+					<?php //get_template_part( 'loop-templates/content', 'frontpage' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
 
-		</div><!-- .row -->
-
-	</div><!-- #content -->
+		
+	</div> <!--#content -->
 
 </div><!-- #page-wrapper -->
 

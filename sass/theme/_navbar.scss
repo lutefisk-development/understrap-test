@@ -6,4 +6,15 @@
 	.my-navbar {
 		background-color: $nav-color;
 	}
+
+	a:hover {
+		border: 2px solid $navbar-light-color;
+		border-radius: 50px;
+	}
+
+	.active {
+		a:hover {
+			border: none;
+		}
+	}
 }

@@ -1,40 +1,45 @@
+<?php
+/**
+ * The USP section
+ */
+
+$icon = get_field('usp_fa_icon');
+$header = get_field('usp_heading');
+$para = get_field('usp_paragraph');
+
+?>
+
 <div class="col-md">
 	 
 	<div class="usp">
 		 
-		 <?php 
-			
-			if($icon = get_post_meta(get_the_ID(), 'icon', true)) {
-				
-				?>
-					
-					<span class="fa <?php echo $icon; ?> fa-4x"></span>
-				
-				<?php
-			
-			} 
+		<span class="fa <?php echo $icon; ?> fa-4x"></span>
 		
-		?>
-		
-		<h1><?php the_title(); ?></h1>
-		
-		<?php the_content(); ?>
-
-		<?php 
+		<h1>
 			
-			$link = get_post_meta(get_the_ID(), 'link', true);
-			
-			if($link) {
+			<?php 
 				
-				?>
-					
-					<a href="<?php echo $link; ?>" class="btn btn-primary"><?php _e('Read more', 'understrap'); ?></a>
+				printf(
+					__('%s', 'understrap'),
+					$header
+				); 
 				
-				<?php
+			?>
 			
-			}
+		</h1>
 		
-		?>
+		<p>
+			
+			<?php 
+			
+				printf(
+					__('%s', 'understrap'),
+					$para
+				);
+			
+			?>
+		
+		</p>
 	
 	</div>
 

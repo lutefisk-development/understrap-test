@@ -1,0 +1,33 @@
+/**
+* Contact Me styles
+*/
+
+.contact {
+	margin-top: 3rem;
+
+	.container {
+		h1 {
+			text-align: center;
+			color: $about-color;
+		}
+
+		#contact-form-wrapper {
+			max-width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 2rem;
+
+			label {
+				color: $about-color;
+			}
+
+			p {
+				.btn {
+					border-color: $about-color;
+					color: $about-color;
+					background-color: lighten($about-bg, 10%);
+				}
+			}
+		}
+	}
+}
